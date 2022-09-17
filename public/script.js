@@ -18,6 +18,22 @@ function activeTab(event) {
     }    
 }
 
+function activeTabForm(event) {
+    const div1 = document.getElementsByClassName('red')[1];
+    div1.setAttribute('class', 'tabs');
+
+    event.target.setAttribute('class', 'red');
+    
+    if (event.target.innerText === 'ЗАПОРІЖЖЯ') {
+        document.getElementById('form_adress').innerText = 'м. Запоріжжя, вулиця Шкільна, 56'
+        document.getElementById('form_tel').innerText = '+38 (093) 973 87 77'
+    } else if (event.target.innerText === 'КИЇВ') {
+        document.getElementById('form_adress').innerText = 'м.Київ, вул. Верхній Вал, 24'
+        document.getElementById('form_tel').innerText = '+38 (073) 126 00 72'
+    }
+    
+}
+
 function modalWindow(event) {
     console.log('working');
 }
@@ -94,3 +110,13 @@ document.getElementById('phone').addEventListener('input', function (e) {
         arrow.hidden = (scrollY < 100);
     });
 })();
+
+function getForm(event) {
+    document.getElementById('openModal').style = "opacity: 1";
+    //document.getElementById('openModal').setAttribute('onclick', "greySquareHidden();");
+    
+}
+function greySquareHidden() {
+    console.log(1111);
+    document.getElementById('openModal').style = "opacity: 0";
+}

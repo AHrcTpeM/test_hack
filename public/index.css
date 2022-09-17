@@ -70,6 +70,10 @@ header {
   background: #ef5b63;
   border-radius: 10px;
   border: none;
+  cursor: pointer;
+}
+#header-signUp-button:hover {
+  background-color: red;
 }
 
 #header-menu {
@@ -79,12 +83,11 @@ header {
 /* MAIN BANNNER */
 #main-banner {
   height: 587px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   display: flex;
-  flex-direction: row;
+  justify-content: flex-end;
 }
 #text-group {
-  width: 690px;
   height: 350px;
 
   display: flex;
@@ -93,7 +96,6 @@ header {
 }
 
 #text-group-1 {
-  width: 546px;
   height: 48px;
   margin-bottom: 10px;
 
@@ -110,16 +112,15 @@ header {
 }
 
 #text-group-2 {
-  width: 690px;
   height: 192px;
 
   /* font-family: "Rubik"; */
   font-style: normal;
   font-weight: 700;
-  font-size: 80px;
-  line-height: 96px;
+  font-size: 60px;
+  line-height: 80px;
 
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   text-transform: uppercase;
 
   color: #232f3c;
@@ -147,6 +148,10 @@ header {
   text-transform: uppercase;
 
   color: #ffffff;
+  cursor: pointer;
+}
+#text-group-signUp-button:hover{
+  background-color: red;
 }
 
 #text-group-video-button {
@@ -237,7 +242,7 @@ header {
   margin-bottom: 120px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 #about-PCA-text-container {
@@ -301,13 +306,13 @@ header {
 }
 
 /* PHOTO-GALLERY */
-#photo-gallery {
+/* #photo-gallery {
   margin-bottom: 180px;
   display: grid;
   grid-template-columns: repeat(6, 210px);
   grid-template-rows: repeat(3, 210px);
   grid-gap: 30px;
-}
+} */
 
 #photo-gallery img {
   width: 100%;
@@ -320,10 +325,10 @@ header {
   grid-row: 1 / 3;
 }
 #photo-4 {
-  grid-column: 5 / 7;
+  grid-column: 2 / 4;
 }
 #photo-6 {
-  grid-column: 4 / 6;
+  grid-column: 1 / 3;
   grid-row: 2 / 4;
 }
 #photo-9 {
@@ -333,8 +338,8 @@ header {
 /* PARTNERS */
 #partners {
   position: relative;
-  width: 1291px;
-  height: 88px;
+  max-width: 1291px;
+  min-height: 88px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 120px;
@@ -342,30 +347,21 @@ header {
   vertical-align: middle;
 }
 
-#partners p {
-  position: absolute;
-  bottom: -135%;
-
+#text_part {
   /* font-family: "Rubik"; */
-  font-style: normal;
-  font-weight: 700;
-  font-size: 140px;
-  line-height: 88px;
-
-  letter-spacing: 3px;
+  font-size: 40px;
   text-transform: uppercase;
-
-  color: rgba(245, 246, 249, 0.03);
+  display: none;
 }
 
 #group130 {
-  width: 876.62px;
-  height: 58px;
+  min-height: 58px;
   margin: auto;
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #IT-nation-logo {
@@ -392,12 +388,15 @@ header {
 /* CONTACTS */
 #contacts {
   position: relative;
-  height: 688px;
+  min-height: 688px;
 }
 
 #mask-group {
-  height: 494px;
-  padding-top: 141px;
+  background-image: url('assets/contacts/Mask Group.png');
+  background-size: 1410px 494px;
+  height: 400px;
+  padding: 40px 30px;
+  border-radius: 20px;
 }
 
 #mask-group img {
@@ -406,21 +405,17 @@ header {
 }
 
 #contacts-content {
-  position: absolute;
-  width: 450px;
-  height: 402px;
-  top: 187px;
-  right: 917;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 400px;
 
-  /* font-family: "IBM Plex Mono"; */
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 32px;
   color: #ffffff;
-
-  display: flex;
-  flex-direction: column;
+  
   gap: 18px;
 }
 
@@ -570,3 +565,131 @@ footer {
 footer img {
   padding: auto;
 }
+
+
+/* /////// */
+.modal {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* цвет фона */
+  z-index: 1050;
+  opacity: 0; /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none; /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+  opacity: 1; /* делаем окно видимым */
+  pointer-events: auto; /* элемент видим для событий мыши */
+  /* overflow-y: auto; добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 0 200px;
+}
+
+/* свойства для блока, содержащего контент модального окна */
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+  float: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus,
+.close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow: auto;
+}
+
+/* media */
+@media (max-width: 1000px) {
+  #img-group, #girl{
+    display: none;
+  }
+  #main-banner{
+    height: 380px;
+    background-image: url('assets/main-banner/blob_6-8-702060.jpg');
+    background-size: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #group127 {
+    position: static;
+    margin: 0 auto;
+  }
+  #blob, #top-div{
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  #header-social, #header-signUp-button {
+      display: none;
+  }
+}
+@media (max-width: 600px) {
+ #text_part {
+  display: block;
+ }
+ .contact-social, .con_btn{
+  margin: 0 auto;
+ }
+ .mask-group{
+  background-image: url('assets/contacts/Mask Group_mini.jpg');
+  background-size: 332px 494px;
+ }
+}
+
