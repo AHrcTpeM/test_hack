@@ -170,3 +170,8 @@
     border: 2px solid red;
     box-shadow: 0 0 15px red;
 }
+
+#arrow:hover {
+    content: url("assets/footer/arrow.png");
+    opacity: 0.5;
+}
