@@ -1,6 +1,6 @@
 #main-container {
-  width: 1410px;
-  margin: auto;
+  max-width: 1410px;
+  margin: 0 auto;
   font-family: Roboto;
 }
 

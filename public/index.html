@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="igor_style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400;700&family=Oswald:wght@500&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <title>Home page</title>
   </head>
   <body>
@@ -58,7 +58,7 @@
       <!-- COURSES -->
       <!-- TODO:// IMAGES -->
       <div class="courses">
-        <div class="text_title" style="margin-left: 10px;"><b>НАШI КУРСИ</b></div>
+        <div class="text_title" style="margin-left: 15px;"><b>НАШI КУРСИ</b></div>
     
         <div class="tabs_courses">
             <div style="display: flex; margin: 20px 10px 10px 0;">
@@ -67,7 +67,7 @@
                 <div class="tabs" onclick="activeTab(event)">ЗАПОРІЖЖЯ</div>
             </div>
             <div style="font-size: 20px;">
-                <div style="color: #4FCC97; padding-top: 25px;display:inline-block; margin-left: 10px;">ON-LINE</div> НАВЧАННЯ
+                <div style="color: #4FCC97; padding-top: 25px;display:inline-block; margin-left: 15px;">ON-LINE</div> НАВЧАННЯ
             </div>
             
         </div>
@@ -152,7 +152,7 @@
       <!-- SALARIES -->
       <!-- TODO://  REDO CARDS, FLEXIBLE-->
       <div class="salaries">
-        <div class="text_title"  style="padding: 20px 10px;"><b>ЗАРПЛАТИ IT ФАХІВЦІВ</b></div>
+        <div class="text_title"  style="padding: 20px 15px;"><b>ЗАРПЛАТИ IT ФАХІВЦІВ</b></div>
         <div style="display: flex; justify-content: center; flex-wrap: wrap;">
             <div class="salaries_card" style="background-image: url('assets/images/MaskGroup.png');">
                 <div style="padding: 30px 25px;">
@@ -320,25 +320,31 @@
                   цікавлять.
                 </div>
               </div>
-              <form>
+              <form id="form">
                 <div>
                   <input
                     type="text"
+                    class="_req _name"
                     name="name"
                     id="username"
                     placeholder="   ІМ'Я"
+                    
                   />
                   <input
                     type="email"
+                    class="_req _email"
                     name="email"
                     id="email"
                     placeholder="   E-MAIL"
+                    
                   />
                   <input
                     type="tel"
+                    class="_req _num"
                     name="phone"
                     id="phone"
                     placeholder="   ТЕЛЕФОН"
+                    
                   />
                 </div>
                 <button id="feedback-button">ВІДПРАВИТИ ЗАЯВКУ</button>
