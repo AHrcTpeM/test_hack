@@ -1,0 +1,360 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="igor_style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400;700&family=Oswald:wght@500&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <script src="./script.js"></script>
+    <title>Home page</title>
+  </head>
+  <body>
+    <div id="main-container">
+      <header>
+        <div id="header-logo">
+          <img id="logo-shape" src="assets/header/logo/Shape.svg" />
+          <div id="logo-name">
+            <img id="logo-powercode" src="assets/header/logo/POWERCODE.svg" />
+            <img id="logo-academy" src="assets/header/logo/ACADEMY.svg" />
+          </div>
+        </div>
+        <div id="header-social">
+          <img class="social" src="assets/header/social/linkedin.png" />
+          <img class="social" src="assets/header/social/facebook.svg" />
+          <img class="social" src="assets/header/social/youtube.svg" />
+          <img class="social" src="assets/header/social/telegram.svg" />
+          <img class="social" src="assets/header/social/instagram.svg" />
+        </div>
+        <div id="header-phones-menu">
+          <div id="header-phones">+38 (073) 126 00 72 +38 (099) 705 14 18</div>
+          <button id="header-signUp-button">Записатися</button>
+
+          <div id="header-menu">
+            <img src="assets/header/menu.svg" />
+          </div>
+        </div>
+      </header>
+
+      <!-- MAIN BANNNER -->
+      <div id="main-banner">
+        <div id="text-group">
+          <div id="text-group-1">Курси від провідних IT спеціалістів</div>
+          <div id="text-group-2">Powercode Academy</div>
+          <div id="text-group-buttons">
+            <button id="text-group-signUp-button">Записатися</button>
+            <!-- TODO:// PLAYING VIDEO -->
+            <button id="text-group-video-button">ДИВИТИСЬ ВІДЕО</button>
+            <div id="play-image">
+              <img id="group102" src="assets/main-banner/Group 102.svg" />
+              <img id="play" src="assets/main-banner/play.svg" />
+            </div>
+          </div>
+        </div>
+        <img id="img-group" src="assets/main-banner/img-group.png" />
+      </div>
+
+      <!-- COURSES -->
+      <!-- TODO:// IMAGES -->
+      <div class="courses">
+        <div class="text_title" style="margin-left: 10px;"><b>НАШI КУРСИ</b></div>
+    
+        <div class="tabs_courses">
+            <div style="display: flex; margin: 20px 10px 10px 0;">
+                <div class="red" onclick="activeTab(event)">ONLINE</div>
+                <div class="tabs" onclick="activeTab(event)">КИЇВ</div>
+                <div class="tabs" onclick="activeTab(event)">ЗАПОРІЖЖЯ</div>
+            </div>
+            <div style="font-size: 20px;">
+                <div style="color: #4FCC97; padding-top: 25px;display:inline-block; margin-left: 10px;">ON-LINE</div> НАВЧАННЯ
+            </div>
+            
+        </div>
+        <div style="display: flex;justify-content: center; flex-wrap: wrap;">
+            <div class="card" style="background-image: url('assets/images/Group92.png');">                    
+                <div class="text1">
+                    31.01. | 12 уроків <br>
+                    усього місць : 18
+                </div>
+                <div class="text2">{FRONT-END}</div>
+                <!-- <img class="bg_image" src="./images/Group92.png" alt="">                     -->
+            </div>
+            <div class="card" style="background-image: url('assets/images/Group93.png');">
+                <div class="text1">
+                    30.01. | 14 уроків <br>
+                    усього місць : 12
+                </div>
+                <div class="text2">{IT PROJECT MANAGEMENT}</div>
+                <!-- <img class="bg_image" src="./images/Group93.png" alt=""> -->
+            </div>
+            <div class="card" style="background-image: url('assets/images/Group94.png');">
+                <div class="text1">
+                    01.02. | 11 уроків <br>
+                    усього місць : 19
+                </div>
+                <div class="text2">{UX/UI WEB-DESIGN}</div>
+                <!-- <img class="bg_image" src="./images/Group94.png" alt=""> -->
+            </div>
+            <div class="card" style="background-image: url('assets/images/Group.png');">
+                <div class="text1">
+                    31.01. | 12 уроків <br>
+                    усього місць : 10
+                </div>
+                <div class="text2">{FRONT-END ADVANCED}</div>
+                <!-- <img class="bg_image" src="./images/Group.png" alt=""> -->
+            </div>
+
+            <div class="card" style="background-image: url('assets/images/Group92.png');">                    
+                <div class="text1">
+                    05.02. | 16 уроків <br>
+                    усього місць : 8
+                </div>
+                <div class="text2">{BACK-END}</div>
+                <!-- <img class="bg_image" src="./images/Group92.png" alt="">                     -->
+            </div>
+            <div class="card" style="background-image: url('assets/images/Group93.png');">
+                <div class="text1">
+                    28.01. | 10 уроків <br>
+                    усього місць : 15
+                </div>
+                <div class="text2">{QUALITY ASSURANCE}</div>
+                <!-- <img class="bg_image" src="./images/Group93.png" alt=""> -->
+            </div>
+            <div class="card" style="background-image: url('assets/images/Group94.png');">
+                <div class="text1">
+                    06.02. | 22 уроків <br>
+                    усього місць : 5
+                </div>
+                <div class="text2">{MACHINE LEARNING}</div>
+                <!-- <img class="bg_image" src="./images/Group94.png" alt=""> -->
+            </div>
+            <div class="card" style="background-image: url('assets/images/Group.png');">
+                <div class="text1">
+                    28.01. | 18 уроків <br>
+                    усього місць : 3
+                </div>
+                <div class="text2">{BACK-END ADVANCED}</div>
+                <!-- <img class="bg_image" src="./images/Group.png" alt=""> -->
+            </div>
+        </div>
+      </div>      
+
+      <div class="offer">
+        <div class="text_offer" style="padding-top: 30px; font-size:40px">НЕ МОЖЕШ ОБРАТИ</div>  
+        <div class="text_offer" style="font-size:40px"><b>СВІЙ КУРС?</b></div> 
+        <div class="text_offer" style="font-size:25px; min-height: 190px;">Наші фахівці допоможуть із вибором курсу, який підходить саме Вам! Залиште контакти та безкоштовно отримайте інформацію щодо курсу.</div>
+        <div class="pink_btn" onclick="modalWindow(event)"><b>ЗАПИСАТИСЯ</b></div>
+        <img class="bg_image" src="assets/images/blob.png" alt="" style="right: 0%;">
+        <img class="bg_image" src="assets/images/imggroup.svg" alt="">
+      </div>
+
+      <!-- SALARIES -->
+      <!-- TODO://  REDO CARDS, FLEXIBLE-->
+      <div class="salaries">
+        <div class="text_title"  style="padding: 20px 10px;"><b>ЗАРПЛАТИ IT ФАХІВЦІВ</b></div>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+            <div class="salaries_card" style="background-image: url('assets/images/MaskGroup.png');">
+                <div style="padding: 30px 25px;">
+                    <div style="color: #4FCC97; font-size: 40px;"><b>JUNIOR</b></div>
+                    <div>ВІД <b>6</b> МІСЯЦІВ ДОСВІДУ</div>
+                </div>
+                <div  style="padding: 30px 25px;">
+                    <div>ДОХІД ВІД</div>
+                    <div style="font-size: 30px;"><b>$ 400</b></div>
+                    <div>В МІСЯЦ</div>
+                </div>
+            </div>
+
+            <div class="salaries_card" style="background-image: url('assets/images/MaskGroup2.png');">
+                <div style="padding: 30px 25px;">
+                    <div style="color: #55CBDC; font-size: 40px;"><b>MIDDLE</b></div>
+                    <div>ВІД <b>2</b> РОКІВ ДОСВІДУ</div>
+                </div>
+                <div  style="padding: 30px 25px;">
+                    <div>ДОХІД ВІД</div>
+                    <div style="font-size: 30px;"><b>$ 1100</b></div>
+                    <div>В МІСЯЦ</div>
+                </div>
+            </div>
+
+            <div class="salaries_card" style="background-image: url('assets/images/MaskGroup3.png');">
+                <div style="padding: 30px 25px;">
+                    <div style="color: #EF5B63; font-size: 40px;"><b>SENIOR</b></div>
+                    <div>ВІД <b>4</b> РОКІВ ДОСВІДУ</div>
+                </div>
+                <div  style="padding: 30px 25px;">
+                    <div>ДОХІД ВІД</div>
+                    <div style="font-size: 30px;"><b>$ 2400</b></div>
+                    <div>В МІСЯЦ</div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- ABOUT-PCA -->
+      <!-- TODO:// FONTS -->
+      <div id="about-PCA">
+        <div id="about-PCA-text-container">
+          <div id="vertical-line"></div>
+          <div id="about-PCA-header">POWERCODE ACADEMY</div>
+          <div id="about-PCA-description">
+            - це курси від провідних фахівців IT галузі. Ми навчаємо у
+            Запоріжжі, Києві та Online.
+          </div>
+          <div id="about-PCA-text">
+            Наша місія – надавати високоякісну IT освіту, адаптовану до сучасних
+            вимог роботодавців. Наші основні напрямки: Front end, Python, UI/UX
+            design, PM, QA и др. Розшир свої кар’єрні можливості разом з нами!
+          </div>
+        </div>
+        <img src="assets/about-PCA/img.png" />
+      </div>
+
+      <div id="photo-gallery">
+        <div id="photo-1">
+          <img src="assets/photo-gallery/photo-1.png" />
+        </div>
+        <div id="photo-2">
+          <img src="assets/photo-gallery/photo-2.png" />
+        </div>
+        <div id="photo-3">
+          <img src="assets/photo-gallery/photo-3.png" />
+        </div>
+        <div id="photo-4">
+          <img src="assets/photo-gallery/photo-4.png" />
+        </div>
+        <div id="photo-5">
+          <img src="assets/photo-gallery/photo-5.png" />
+        </div>
+        <div id="photo-6">
+          <img src="assets/photo-gallery/photo-6.png" />
+        </div>
+        <div id="photo-7">
+          <img src="assets/photo-gallery/photo-7.png" />
+        </div>
+        <div id="photo-8">
+          <img src="assets/photo-gallery/photo-8.png" />
+        </div>
+        <div id="photo-9">
+          <img src="assets/photo-gallery/photo-9.png" />
+        </div>
+        <div id="photo-10">
+          <img src="assets/photo-gallery/photo-10.png" />
+        </div>
+      </div>
+
+      <!-- PARTNERS  -->
+      <div id="partners">
+        <p>наші партнери</p>
+        <div id="group130">
+          <div id="IT-nation-logo">
+            <img src="assets/partners/Logo IT nation.svg" />
+          </div>
+          <div id="dia-logo">
+            <img src="assets/partners/dia-logo.svg" />
+            <img src="assets/partners/dia-logo-2.svg" />
+          </div>
+          <div id="ease-logo">
+            <img src="assets/partners/ease-logo.svg" />
+          </div>
+          <div id="PC-logo">
+            <img src="assets/partners/PC-logo.svg" />
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACTS -->
+      <div id="contacts">
+        <div id="mask-group">
+          <img src="assets/contacts/Mask Group.png" />
+          <div id="contacts-content">
+            <div id="contacts-buttons">
+              <div class="red">КИЇВ</div>
+              <div class="tabs">ЗАПОРІЖЖЯ</div>
+            </div>
+            <div class="contact">
+              <div>
+                <img src="assets/contacts/Icon color.svg" />
+              </div>
+              <div>м.Київ, вул. Верхній Вал, 24</div>
+            </div>
+            <div class="contact">
+              <div>
+                <img src="assets/contacts/Icon color 1.svg" />
+              </div>
+              <div>+38 (073) 126 00 72</div>
+            </div>
+            <div class="contact">
+              <div>
+                <img src="assets/contacts/Icon color 2.svg" />
+              </div>
+              <div>powercodeacademy@gmail.com</div>
+            </div>
+            <div class="contact-social">
+              <img src="assets/contacts/linkedin.svg" />
+              <img src="assets/contacts/facebook.svg" />
+              <img src="assets/contacts/youtube.svg" />
+              <img srs="assets/contacts/telegram.svg" />
+              <img src="assets/contacts/instagram.svg" />
+            </div>
+          </div>
+        </div>
+        <div id="group127">
+          <div id="blob">
+            <img src="assets/contacts/blob.svg" />
+          </div>
+          <div id="top-div"></div>
+          <div id="feedback">
+            <div id="feedback-content">
+              <div id="CTA">
+                <div>
+                  <div id="question-logo">
+                    <img src="assets/contacts/question.svg" />
+                  </div>
+                  <div id="CTA-1">ЗАлишилися Питання?</div>
+                </div>
+                <div id="CTA-2">
+                  Заповни форму і наш спеціаліст передзвонить тобі, щоб
+                  розповісти про деталі курсу і відповісти на питання, що тебе
+                  цікавлять.
+                </div>
+              </div>
+              <form>
+                <div>
+                  <input
+                    type="text"
+                    name="name"
+                    id="username"
+                    placeholder="   ІМ'Я"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="   E-MAIL"
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    placeholder="   ТЕЛЕФОН"
+                  />
+                </div>
+                <button id="feedback-button">ВІДПРАВИТИ ЗАЯВКУ</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div>
+          <img src="assets/footer/© Powered by POWERCO.svg" />
+        </div>
+        <div>
+          <img src="assets/footer/Group 131.svg" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
