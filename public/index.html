@@ -45,7 +45,7 @@
           <div id="header-phones">+38 (073) 126 00 72 +38 (099) 705 14 18</div>
           <button id="header-signUp-button" onclick="getForm(event)">Записатися</button>
 
-          <div id="header-menu">
+          <div id="header-menu" onclick="getMenu()">
             <img src="assets/header/menu.svg" />
           </div>
         </div>
@@ -56,18 +56,42 @@
         <div id="text-group">
           <div id="text-group-1">Курси від провідних IT спеціалістів</div>
           <div id="text-group-2">Powercode Academy</div>
-          <div id="text-group-buttons">
+          <div class="text-group-buttons">
             <button id="text-group-signUp-button" onclick="getForm(event)">Записатися</button>
             <!-- TODO:// PLAYING VIDEO -->
-            <button id="text-group-video-button" onclick="playVideo(event)">ДИВИТИСЬ ВІДЕО</button>
-            <div id="play-image" style="margin-top:7px" onclick="playVideo(event)">
-              <img id="group102" src="assets/main-banner/Group 102.svg" />
-              <img id="play" src="assets/main-banner/play.svg" />
+            <div class="text-group-buttons">
+              <button id="text-group-video-button" onclick="playVideo()">ДИВИТИСЬ ВІДЕО</button>
+              <div id="play-image" style="margin-top:7px" onclick="playVideo()">
+                <img id="group102" src="assets/main-banner/Group 102.svg" />
+                <img id="play" src="assets/main-banner/play.svg" />
+              </div>
             </div>
+
           </div>
         </div>
         <img id="img-group" src="assets/main-banner/img-group.png" />
       </div>
+
+      <div id="ytplayer" style="display: none; margin:0 auto;"></div>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script>
 
       <!-- COURSES -->
       <div class="courses">
@@ -408,83 +432,164 @@
       </footer>
     </div>
 
-    <!-- MODAL-WINDOW-1 -->
-    <div id="openModal" class="modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-        </div>
-        <div class="modal-body">
-          <div class="modalWindow">
-            <div class="block1">
-              <img src="assets/modal-window-1/logo.svg" alt="logo" />
-              <p class="modalText1">
-                ЗАЛИШИТИ <span class="spanTextModal">ЗАЯВКУ</span>
-              </p>
-              <p class="modalText2">
-                Заповни форму і наш спеціаліст передзвонить тобі, <br />
-                щоб розповісти про деталі курсу і відповісти на <br />
-                питання, що тебе цікавлять.
-              </p>
-              <div>
-                <input class="input1" type="text" placeholder="ІМ'Я" />
+       <!-- MODAL-WINDOW-1 -->
+       <div id="openModal" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+          </div>
+          <div class="modal-body">
+            <div class="modalWindow">
+              <div class="block1">
+                <img src="assets/modal-window-1/logo.svg" alt="logo" />
+                <p class="modalText1">
+                  ЗАЛИШИТИ <span class="spanTextModal">ЗАЯВКУ</span>
+                </p>
+                <p class="modalText2">
+                  Заповни форму і наш спеціаліст передзвонить тобі, <br />
+                  щоб розповісти про деталі курсу і відповісти на <br />
+                  питання, що тебе цікавлять.
+                </p>
+                <form id="form2">
+                  <div>
+                    <input
+                      type="text"
+                      class="_req _name"
+                      name="name"
+                      id="username2"
+                      placeholder="   ІМ'Я"
+                      
+                    />
+                    <input
+                      type="email"
+                      class="_req _email"
+                      name="email"
+                      id="email2"
+                      placeholder="   E-MAIL"
+                      
+                    />
+                    <input
+                      type="tel"
+                      class="_req _num"
+                      name="phone"
+                      id="phone2"
+                      placeholder="   ТЕЛЕФОН"
+                      
+                    />
+                  </div>
+                  <button id="feedback-button">ВІДПРАВИТИ ЗАЯВКУ</button>
+              </form>
+                <!-- <div>
+                  <input class="input1" type="text" placeholder="ІМ'Я" />
+                </div>
+                <div>
+                  <input class="input2" type="email" placeholder="E-MAIL" />
+                </div>
+                <div>
+                  <input class="input3" type="number" placeholder="ТЕЛЕФОН" />
+                </div> -->
+              <!-- <a href="#openModal2">
+                  <button class="btnModal1">ВІДПРАВИТИ</button>
+              </a> -->
               </div>
               <div>
-                <input class="input2" type="email" placeholder="E-MAIL" />
+                <div>
+                  <a href="" title="Close" class="close"
+                    ><button class="btnMenu">
+                      <img src="assets/modal-window-1/menu.png" alt="" onclick="closeModal1()" />
+                    </button>
+                  </a>
+                </div>
+                <img src="assets/modal-window-1/img.png" alt="img" onclick="closeModal1()"/>
               </div>
-              <div>
-                <input class="input3" type="number" placeholder="ТЕЛЕФОН" />
-              </div>
-            <a href="#openModal2">
-                <button class="btnModal1">ВІДПРАВИТИ</button>
-            </a>
-            </div>
-            <div>
-              <div>
-                <a href="#close" title="Close" class="close"
-                  ><button class="btnMenu">
-                    <img src="assets/modal-window-1/menu.png" alt="" />
-                  </button>
-                </a>
-              </div>
-              <img src="assets/modal-window-1/img.png" alt="img" />
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- MODAL-WINDOW-2 -->
+    <div id="openModal2" class="modal2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div class="modal-body">
+              <div class="conteinerModal">
+                  <div class="miniConteinerModal">
+                  <div class="logoModal2"><img  src="assets/modal-window-2/logo.svg" alt="logo"></div>
+                      <img  class="imgModalApplication" src="assets/modal-window-2/blob_8-5-68374.png" alt="img">
+                  </div>
+                      <div>
+                          <p class="textApplication">Дякуємо за заявку!</p>
+                          <p class="textApplication2">Скоро з вами зв'яжеться наш <br>
+                           менеджер, чекайте на дзвінок</p>
+                           <a href="">
+                               <button class="btnApplication" onclick="getMain()">Повернутися на головну</button>                                 
+                           </a>
+                      </div>
+      
+                      <div class="conteinerApplication">
+                          <a href="" title="Close" class="close"
+                              >
+                          <div class="miniConteinerImgApplication"><button class="btnMenuModalApplication"><img  src="assets/modal-window-2/menu.png" alt="exit" onclick="closeModal2()"></button></div>
+                          </a>
+                          <img  src="assets/modal-window-2/blob_6-8-702060.png" alt="img" onclick="closeModal2()">
+                      </div>
+                  </div>
+              </div>
+              </div>
+      </div>
+
+  </div>
+  
+
   </div>
 
-  <!-- MODAL-WINDOW-2 -->
-  <div id="openModal2" class="modal">
+  <!-- OPEN-MENU -->
+  <div id="openModal3" class="modal3">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header"></div>
-        <div class="modal-body">
-            <div class="conteinerModal">
-                <div class="miniConteinerModal">
-                <div class="logoModal2"><img  src="assets/modal-window-2/logo.svg" alt="logo"></div>
-                    <img  class="imgModalApplication" src="assets/modal-window-2/blob_8-5-68374.png" alt="img">
-                </div>
-                    <div>
-                        <p class="textApplication">Дякуємо за заявку!</p>
-                        <p class="textApplication2">Скоро з вами зв'яжеться наш <br>
-                         менеджер, чекайте на дзвінок</p>
-                         <a href="#main-container">
-                             <button class="btnApplication">Повернутися на головну</button>                                 
-                         </a>
-                    </div>
-    
-                    <div class="conteinerApplication">
-                        <a href="#close" title="Close" class="close"
-                            >
-                        <div class="miniConteinerImgApplication"><button class="btnMenuModalApplication"><img  src="assets/modal-window-2/menu.png" alt="exit"></button></div>
-                        </a>
-                        <img  src="assets/modal-window-2/blob_6-8-702060.png" alt="img">
-                    </div>
-                </div>
+
+        <div id="headerMenu">
+          <div class="openMenuDiv">
+            <div id="headerLogo">
+              <img class="logoOpenMenu" src="assets/open-menu/logo.svg" />
             </div>
+            <div id="header-social">
+              <img class="social" src="assets/open-menu/linredIn.svg" />
+              <img class="social" src="assets/open-menu/facebook.svg" />
+              <img class="social" src="assets/open-menu/Combined Shape.svg" />
+              <img class="social" src="assets/open-menu/XMLID_497_.svg" />
+              <img class="social" src="assets/open-menu/instagram.svg" />
             </div>
+            <div id="header-phones-menu">
+              <div id="headerPhones">+38 (073) 126 00 72 +38 (099) 705 14 18</div>
+              <a href="" title="Close" class="close" onclick="closeModal3()">
+                <button class="btnMenuOpenMenu">
+                  <img src="assets/open-menu/menu.svg" alt="" onclick="closeModal3()">
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="textAndImg">
+          <div class="blockOpenMenu">
+            <p class="textOpenMenu">ПРО НАС</p>
+            <p class="textOpenMenu">КИЇВ</p>
+            <p class="textOpenMenu">ЗАПОРІЖЖЯ</p>
+            <p class="textOpenMenu2">ON-LINE КУРСИ</p>
+            <p class="textOpenMenu">БЕЗКОШТОВНІ УРОКИ</p>
+            <p class="textOpenMenu">ВАКАНСІЇ</p>
+          </div>
+          <div class="imgOpenMenu">
+            <img src="assets/open-menu/img (1).png" alt="img" onclick="closeModal3()">
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
+  </div>
+</div>
+
+</body>
 </html>

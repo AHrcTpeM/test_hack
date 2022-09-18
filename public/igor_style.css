@@ -109,6 +109,9 @@
     .bg_image {
         display: none;
     }
+    .red, .tabs {
+        width: 100px;
+    }
 }
 
 .offer {

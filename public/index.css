@@ -78,6 +78,7 @@ header {
 #header-menu {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 /* MAIN BANNNER */
 #main-banner {
@@ -125,9 +126,10 @@ header {
   color: #232f3c;
 }
 
-#text-group-buttons {
+.text-group-buttons {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -239,7 +241,7 @@ header {
 
 /* ABOUT-PCA */
 #about-PCA {
-  height: 582px;
+  min-height: 582px;
   margin-bottom: 120px;
   display: flex;
   flex-direction: row;
@@ -248,7 +250,7 @@ header {
 
 #about-PCA-text-container {
   width: 854px;
-  height: 406px;
+  min-height: 406px;
   padding-top: 112px;
 }
 
@@ -568,6 +570,299 @@ footer img {
 }
 
 
+/* MODAL_WINDOW_1 */
+.modalWindow {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 0%;
+  padding: 0%;
+  margin-top: 22px;
+  margin-left: 255px;
+}
+.applicationModal {
+  display: flex;
+  justify-content: center;
+  width: 580px;
+  height: 58px;
+}
+.modalText1 {
+  font-size: 42px;
+  font-weight: 300;
+  width: 580px;
+  height: 58px;
+  margin-bottom: 16px;
+  padding: 0;
+  color: #333333;
+  margin-top: 90px;
+}
+.spanTextModal {
+  font-size: 42px;
+  font-weight: 700;
+}
+.modalText2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0;
+}
+.input1 {
+  width: 480px;
+  height: 58px;
+  border-color: #606060;
+  background-color: #ffffff;
+  border-width: 1px;
+  border-radius: 10px;
+  padding-left: 19px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 28px;
+}
+.input2 {
+  margin-top: 16px;
+  width: 480px;
+  height: 58px;
+  border-color: #606060;
+  background-color: #ffffff;
+  border-width: 1px;
+  border-radius: 10px;
+  padding-left: 19px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.input3 {
+  margin-top: 16px;
+  width: 480px;
+  height: 58px;
+  border-color: #606060;
+  background-color: #ffffff;
+  border-width: 1px;
+  border-radius: 10px;
+  padding-left: 19px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 328px;
+}
+.btnModal1 {
+  width: 500px;
+  height: 58px;
+  border-width: 0px;
+  border-radius: 10px;
+  background-color: #ef5b63;
+  font-weight: 700;
+  color: white;
+  margin-top: 26px;
+}
+.btnMenu {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 0px;
+  margin-left: 650px;
+  margin-right: 255px;
+  margin-top: 30px;
+  margin-bottom: 49px;
+}
+
+/* MODAL-WINDOW-2 */
+.conteinerModal {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.miniConteinerModal {
+  width: 640px;
+}
+.logoModal2 {
+  width: 500px;
+  padding-left: 255px;
+  margin-left: 0px;
+  margin-top: 0%;
+  padding-top: 22px;
+  height: 52px;
+  margin-bottom: 265px;
+}
+
+.imgModalApplication {
+  margin-left: 210px;
+}
+.textApplication {
+  margin-top: 330px;
+  width: 400px;
+  padding-left: 120px;
+  font-weight: 700;
+  font-size: 60px;
+  color: #232f3c;
+  margin-bottom: 0ch;
+  text-align: center;
+}
+.textApplication2 {
+  margin-top: 26px;
+  font-weight: 400;
+  font-size: 26px;
+  color: #333333;
+  padding-left: 120px;
+  text-align: center;
+  margin-bottom: 0ex;
+}
+.btnApplication {
+  width: 288px;
+  margin-left: 170px;
+  background-color: #ef5b63;
+  color: white;
+  border-radius: 10px;
+  border-width: 0px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 36px;
+  height: 60px;
+  text-align: center;
+}
+.miniConteinerImgApplication {
+  width: 500px;
+  margin-left: 320px;
+  margin-bottom: 244px;
+}
+.btnMenuModalApplication {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 0px;
+  margin-top: 30px;
+}
+.imgModalApplication2 {
+  margin-top: 314px;
+  height: 398px;
+}
+.conteinerApplication {
+  margin-left: 150px;
+}
+
+* OPEN-MENU */
+/* #openModal3 {
+  width: 100vw;
+} */
+.openMenuDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0%;
+  margin-left: 255px;
+}
+/* #main-container {
+  width: 1410px;
+  margin: auto;
+} */
+
+#headerMenu {
+  height: 56px;
+  margin-bottom: 52px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#headerLogo {
+  width: 182px;
+  height: 56px;
+  display: flex;
+  justify-content: flex-start;
+  /* margin-left: 255px; */
+}
+
+#logoName {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left: 8px;
+}
+
+.social {
+  width: 18px;
+  height: 18px;
+  margin: 10px;
+}
+#headerPhones {
+  width: 139px;
+  height: 34px;
+  margin-right: 30px;
+
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #232f3c;
+}
+
+#header-phones-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#headerPhones {
+  margin-right: 30px;
+}
+
+#header-signUp-button {
+  margin-right: 20px;
+  width: 142px;
+  height: 40px;
+
+  background: #ef5b63;
+  border-radius: 10px;
+}
+
+#header-menu {
+  width: 40px;
+  height: 40px;
+}
+.btnMenuOpenMenu {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 0px;
+  margin-right: 255px;
+}
+.blockOpenMenu {
+  margin-left: 255px;
+  width: 690px;
+  margin-top: 124px;
+}
+.textOpenMenu {
+  width: 100%;
+  font-family: "Rubik";
+  font-weight: 700;
+  font-size: 44px;
+}
+.textOpenMenu2 {
+  width: 100%;
+  font-family: "Rubik";
+  font-weight: 700;
+  font-size: 44px;
+  color: #ef5b63;
+}
+.textAndImg {
+  display: flex;
+  margin-top: 0%;
+}
+.imgOpenMenu {
+  margin-top: 100px;
+  margin-left: 80px;
+  margin-right: 0;
+}
+
 /* /////// */
 .modal {
   position: fixed; /* фиксированное положение */
@@ -577,25 +872,63 @@ footer img {
   left: 0;
   background: rgba(0, 0, 0, 0.5); /* цвет фона */
   z-index: 1050;
-  opacity: 0; /* по умолчанию модальное окно прозрачно */
+  opacity: 0; 
+  /* по умолчанию модальное окно прозрачно */
   -webkit-transition: opacity 200ms ease-in;
   -moz-transition: opacity 200ms ease-in;
   transition: opacity 200ms ease-in; /* анимация перехода */
-  pointer-events: none; /* элемент невидим для событий мыши */
+  pointer-events: none;
+   /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+.modal2 {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* цвет фона */
+  z-index: 1050;
+  opacity: 0; 
+  /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none;
+   /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+.modal3 {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* цвет фона */
+  z-index: 1050;
+  opacity: 0; 
+  /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none;
+   /* элемент невидим для событий мыши */
   margin: 0;
   padding: 0;
 }
 /* при отображении модального окно */
 .modal:target {
-  opacity: 1; /* делаем окно видимым */
-  pointer-events: auto; /* элемент видим для событий мыши */
+  opacity: 1; 
+  pointer-events: auto; 
   /* overflow-y: auto; добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
 /* ширина модального окна и его отступы от экрана */
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 0 200px;
+  margin: 10px;
 }
 
 /* свойства для блока, содержащего контент модального окна */
@@ -617,7 +950,6 @@ footer img {
   border-radius: 0.3rem;
   outline: 0;
 }
-
 .modal-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -628,7 +960,6 @@ footer img {
 /* свойства для кнопки "Закрыть" */
 .close {
   float: right;
-  font-family: sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 1;
@@ -656,6 +987,7 @@ footer img {
   overflow: auto;
 }
 
+
 /* media */
 @media (max-width: 1000px) {
   #img-group, #girl{
@@ -680,6 +1012,18 @@ footer img {
   #header-social, #header-signUp-button {
       display: none;
   }
+  #text-group-2 {
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+  }
+  #text-group-1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .text-group-buttons{
+    justify-content: center;
+  }
 }
 @media (max-width: 600px) {
  #text_part {
@@ -691,6 +1035,9 @@ footer img {
  .mask-group{
   background-image: url('assets/contacts/Mask Group_mini.jpg');
   background-size: 332px 494px;
+ }
+ #about-PCA-header {
+  font-size: 50px;
  }
 }
 

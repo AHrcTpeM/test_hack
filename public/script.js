@@ -48,7 +48,37 @@ form.addEventListener('submit', (event) => {
         phone: form.phone.value
     }
     data = JSON.stringify(data);
-    if (!formValidate(form)) {
+    if (formValidate(form2) === 2) {
+        getModal2();
+        console.log('good');
+        fetch('/form', {
+            method: 'POST',
+            body: data,
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => response.json())
+        .then((result) => {
+            console.log(result);          
+        })
+        .catch((err) => console.log(err));
+    }
+    
+})
+
+form2.addEventListener('submit', (event) => {
+    console.log(222);
+    event.preventDefault();
+    let data = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value
+    }
+    data = JSON.stringify(data);
+    console.log(formValidate(form2));
+    if (formValidate(form2) === 2) {
+        getModal2();
         console.log('good');
         fetch('/form', {
             method: 'POST',
@@ -99,6 +129,11 @@ document.getElementById('phone').addEventListener('input', function (e) {
     e.target.value = !x[2] ? x[1] : '(' + x[1] + ') '+ x[2] + (x[3] ? '-' + x[3] : '');
 });
 
+document.getElementById('phone2').addEventListener('input', function (e) {
+    var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+    e.target.value = !x[2] ? x[1] : '(' + x[1] + ') '+ x[2] + (x[3] ? '-' + x[3] : '');
+});
+
 (function arrowMagic() {
     arrow.onclick = function() {
         window.scrollTo({
@@ -111,12 +146,49 @@ document.getElementById('phone').addEventListener('input', function (e) {
     });
 })();
 
-function getForm1(event) {
-    document.getElementById('openModal').style = "opacity: 1";
+function getForm(event) {
+    console.log(111111);
+    document.getElementsByClassName('modal')[0].style = "opacity: 1; pointer-events: auto";
+    //document.getElementsByClassName('modal')[0].style = "pointer-events: auto";
     //document.getElementById('openModal').setAttribute('onclick', "greySquareHidden();");
     
 }
+
+function closeModal1() {
+    document.getElementsByClassName('modal')[0].style = "opacity: 0; pointer-events: none";
+}
+function closeModal2() {
+    document.getElementsByClassName('modal2')[0].style = "opacity: 0; pointer-events: none";
+}
+function closeModal3() {
+    console.log(777);
+    document.getElementsByClassName('modal3')[0].style = "opacity: 0; pointer-events: none";
+}
+
 function greySquareHidden() {
     console.log(1111);
     document.getElementById('openModal').style = "opacity: 0";
+}
+
+function getModal2() {
+    document.getElementsByClassName('modal')[0].style = "opacity: 0; pointer-events: none";
+    console.log(3333);
+    document.getElementsByClassName('modal2')[0].style = "opacity: 1; pointer-events: auto";    
+}
+
+function getMenu() {
+    document.getElementsByClassName('modal3')[0].style = "opacity: 1; pointer-events: auto";
+}
+
+function getMain() {
+    document.getElementsByClassName('modal2')[0].style = "opacity: 0; pointer-events: none";
+}
+
+function playVideo() {
+    console.log(666);
+    let div = document.getElementById('ytplayer')
+    //let img = document.getElementById('img-group')
+    div.style.display = div.style.display === 'none' ? 'block' : 'none'
+    //img.style.display = img.style.display === 'none' ? 'block' : 'none'
+    button.innerHTML= button.innerHTML === "ДИВИТИСЬ ВІДЕО" ? "ЗАКРИТИ ВІДЕО" : "ДИВИТИСЬ ВІДЕО"
 }
