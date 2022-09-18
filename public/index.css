@@ -987,7 +987,9 @@ footer img {
   overflow: auto;
 }
 
-
+.block1 {
+  margin-left: 300px;
+}
 /* media */
 @media (max-width: 1000px) {
   #img-group, #girl{
