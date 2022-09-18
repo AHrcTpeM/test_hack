@@ -579,7 +579,7 @@ footer img {
   margin: 0%;
   padding: 0%;
   margin-top: 22px;
-  margin-left: 255px;
+  margin-left: 20px;
 }
 .applicationModal {
   display: flex;
@@ -749,7 +749,7 @@ footer img {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 0%;
-  margin-left: 255px;
+  margin-left: 20px;
 }
 /* #main-container {
   width: 1410px;
@@ -836,9 +836,9 @@ footer img {
   margin-right: 255px;
 }
 .blockOpenMenu {
-  margin-left: 255px;
+  margin-left: 20px;
   width: 690px;
-  margin-top: 124px;
+  margin-top: 50px;
 }
 .textOpenMenu {
   width: 100%;
