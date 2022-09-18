@@ -30,7 +30,6 @@ header {
 }
 
 .social {
-  width: 18px;
   height: 18px;
   margin: 10px;
 }
@@ -166,12 +165,14 @@ header {
   text-transform: uppercase;
 
   color: #333333;
+  cursor: pointer;
 }
 
 #play-image {
   position: relative;
   width: 44px;
   height: 44px;
+  cursor: pointer;
 }
 
 #play {
@@ -401,7 +402,7 @@ header {
 
 #mask-group img {
   width: 100%;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 #contacts-content {

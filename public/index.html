@@ -14,19 +14,32 @@
   <body>
     <div id="main-container">
       <header>
-        <div id="header-logo">
+        <a href="https://powercode.academy/uk/" target="_blank" rel="noopener noreferrer">
+          <div id="header-logo">
           <img id="logo-shape" src="assets/header/logo/Shape.svg" />
           <div id="logo-name">
             <img id="logo-powercode" src="assets/header/logo/POWERCODE.svg" />
             <img id="logo-academy" src="assets/header/logo/ACADEMY.svg" />
           </div>
         </div>
+        </a>        
         <div id="header-social">
-          <img class="social" src="assets/header/social/linkedin.png" />
-          <img class="social" src="assets/header/social/facebook.svg" />
-          <img class="social" src="assets/header/social/youtube.svg" />
-          <img class="social" src="assets/header/social/telegram.svg" />
-          <img class="social" src="assets/header/social/instagram.svg" />
+          <a href="https://www.linkedin.com/company/powercodeacademy" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"> 
+            <img class="social" src="assets/header/social/linkedin.png" />
+          </a> 
+          <a href="https://www.facebook.com/powercodeacademy/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+            <img class="social" src="assets/header/social/facebook.svg" />
+          </a>
+          <a href="https://www.youtube.com/channel/UC1oTeYSdBUsEZey2YVVgnxQ" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+            <img class="social" src="assets/header/social/youtube.svg" />
+          </a>
+          <a href="https://t.me/powercodeconference" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+            <img class="social" src="assets/header/social/telegram.svg" />
+          </a>
+          <a href="https://www.instagram.com/powercodeacademy/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+            <img class="social" src="assets/header/social/instagram.svg" />
+          </a>
+          
         </div>
         <div id="header-phones-menu">
           <div id="header-phones">+38 (073) 126 00 72 +38 (099) 705 14 18</div>
@@ -46,8 +59,8 @@
           <div id="text-group-buttons">
             <button id="text-group-signUp-button" onclick="getForm(event)">Записатися</button>
             <!-- TODO:// PLAYING VIDEO -->
-            <button id="text-group-video-button">ДИВИТИСЬ ВІДЕО</button>
-            <div id="play-image">
+            <button id="text-group-video-button" onclick="playVideo(event)">ДИВИТИСЬ ВІДЕО</button>
+            <div id="play-image" style="margin-top:7px" onclick="playVideo(event)">
               <img id="group102" src="assets/main-banner/Group 102.svg" />
               <img id="play" src="assets/main-banner/play.svg" />
             </div>
@@ -72,28 +85,28 @@
             
         </div>
         <div style="display: flex;justify-content: center; flex-wrap: wrap;">
-            <div class="card" style="background-image: url('assets/images/Group92.png');">                    
+            <div class="card" style="background-image: url('assets/images/Group92.png');" onclick="getForm(event)">                    
                 <div class="text1">
                     31.01. | 12 уроків <br>
                     усього місць : 18
                 </div>
-                <div class="text2">{FRONT-END}</div>                   -->
+                <div class="text2">{FRONT-END}</div>
             </div>
-            <div class="card" style="background-image: url('assets/images/Group93.png');">
+            <div class="card" style="background-image: url('assets/images/Group93.png');" onclick="getForm(event)">
                 <div class="text1">
                     30.01. | 14 уроків <br>
                     усього місць : 12
                 </div>
                 <div class="text2">{IT PROJECT MANAGEMENT}</div>
             </div>
-            <div class="card" style="background-image: url('assets/images/Group94.png');">
+            <div class="card" style="background-image: url('assets/images/Group94.png');" onclick="getForm(event)">
                 <div class="text1">
                     01.02. | 11 уроків <br>
                     усього місць : 19
                 </div>
                 <div class="text2">{UX/UI WEB-DESIGN}</div>
             </div>
-            <div class="card" style="background-image: url('assets/images/Group.png');">
+            <div class="card" style="background-image: url('assets/images/Group.png');" onclick="getForm(event)">
                 <div class="text1">
                     31.01. | 12 уроків <br>
                     усього місць : 10
@@ -101,28 +114,28 @@
                 <div class="text2">{FRONT-END ADVANCED}</div>
             </div>
 
-            <div class="card" style="background-image: url('assets/images/Group92.png');">                    
+            <div class="card" style="background-image: url('assets/images/Group92.png');" onclick="getForm(event)">                    
                 <div class="text1">
                     05.02. | 16 уроків <br>
                     усього місць : 8
                 </div>
                 <div class="text2">{BACK-END}</div>                  
             </div>
-            <div class="card" style="background-image: url('assets/images/Group93.png');">
+            <div class="card" style="background-image: url('assets/images/Group93.png');" onclick="getForm(event)">
                 <div class="text1">
                     28.01. | 10 уроків <br>
                     усього місць : 15
                 </div>
                 <div class="text2">{QUALITY ASSURANCE}</div>
             </div>
-            <div class="card" style="background-image: url('assets/images/Group94.png');">
+            <div class="card" style="background-image: url('assets/images/Group94.png');" onclick="getForm(event)">
                 <div class="text1">
                     06.02. | 22 уроків <br>
                     усього місць : 5
                 </div>
                 <div class="text2">{MACHINE LEARNING}</div>
             </div>
-            <div class="card" style="background-image: url('assets/images/Group.png');">
+            <div class="card" style="background-image: url('assets/images/Group.png');" onclick="getForm(event)">
                 <div class="text1">
                     28.01. | 18 уроків <br>
                     усього місць : 3
@@ -254,17 +267,27 @@
         <p id="text_part"><b>наші партнери</b></p>
         <div id="group130">
           <div id="IT-nation-logo" style="margin: 20px 30px;">
-            <img src="assets/partners/Logo IT nation.svg" />
+            <a href="https://globalcompact.org.ua/projects/it-nation-2-0/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/partners/Logo IT nation.svg" />
+            </a>            
           </div>
           <div id="dia-logo" style="margin: 20px 30px;">
-            <img src="assets/partners/dia-logo.svg" />
-            <img src="assets/partners/dia-logo-2.svg" />
+            <a href="https://diia.gov.ua/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/partners/dia-logo.svg" />
+            </a>
+            <a href="https://diia.gov.ua/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/partners/dia-logo-2.svg" />
+            </a>                        
           </div>
           <div id="ease-logo" style="margin: 20px 30px;">
-            <img src="assets/partners/ease-logo.svg" />
+            <a href="https://it-ease.com/" target="_blank" rel="noopener noreferrer">
+               <img src="assets/partners/ease-logo.svg" />
+            </a>           
           </div>
           <div id="PC-logo" style="margin: 20px 30px;">
-            <img src="assets/partners/PC-logo.svg" />
+            <a href="https://powercode.co.uk/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/partners/PC-logo.svg" />
+            </a>            
           </div>
         </div>
       </div>
@@ -348,15 +371,26 @@
                   <div>
                     <img src="assets/contacts/Icon color 2.svg" style="margin-top: 8px;"/>
                   </div>
-                  <div>powercodeacademy@gmail.com</div>
+                  <div> <a href="mailto:powercodeacademy@gmail.com" style="text-decoration: none;color: white;">powercodeacademy@gmail.com</a></div>
                 </div>
             </div>
-            <div class="contact-social">
-              <img src="assets/contacts/linkedin.svg" />
-              <img src="assets/contacts/facebook.svg" />
-              <img src="assets/contacts/youtube.svg" />
-              <!-- <img srs="assets/contacts/telegram.svg" /> -->
-              <img src="assets/contacts/instagram.svg" />
+            <div class="contact-social"> 
+              <a href="https://www.linkedin.com/company/powercodeacademy" target="_blank">
+                <img src="assets/contacts/linkedin.svg" />
+              </a>             
+              <a href="https://www.facebook.com/powercodeacademy/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/contacts/facebook.svg" />
+              </a>
+              <a href="https://www.youtube.com/channel/UC1oTeYSdBUsEZey2YVVgnxQ" target="_blank" rel="noopener noreferrer">
+                <img src="assets/contacts/youtube.svg" style="height: 17px;"/>
+              </a>
+              <a href="https://t.me/powercodeconference" target="_blank" rel="noopener noreferrer">
+                <img src="assets/contacts/telegram.svg" />       
+              </a>
+              <a href="https://www.instagram.com/powercodeacademy/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/contacts/instagram.svg" />
+              </a>     
+              
             </div>
           </div>
         </div>
@@ -364,7 +398,9 @@
       </div>
       <footer>
         <div>
-          <img src="assets/footer/© Powered by POWERCO.svg" />
+          <a href="https://globalcompact.org.ua/projects/it-nation-2-0/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/footer/© Powered by POWERCO.svg" />
+          </a>          
         </div>
         <div>
           <img id="arrow" src="assets/footer/Group 131.svg" hidden/>

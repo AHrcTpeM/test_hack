@@ -111,7 +111,7 @@ document.getElementById('phone').addEventListener('input', function (e) {
     });
 })();
 
-function getForm(event) {
+function getForm1(event) {
     document.getElementById('openModal').style = "opacity: 1";
     //document.getElementById('openModal').setAttribute('onclick', "greySquareHidden();");
     
