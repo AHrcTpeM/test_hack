@@ -71,9 +71,9 @@ form2.addEventListener('submit', (event) => {
     console.log(222);
     event.preventDefault();
     let data = {
-        name: form.name.value,
-        email: form.email.value,
-        phone: form.phone.value
+        name: form2.name.value,
+        email: form2.email.value,
+        phone: form2.phone.value
     }
     data = JSON.stringify(data);
     console.log(formValidate(form2));
